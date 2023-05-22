@@ -2,12 +2,12 @@ import firebase from "firebase/compat/app"
 import "firebase/compat/firestore"
 
 const firebaseConfig = {
-    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-    projectId: process.env.REACT_APP_PROJECT_ID,
-    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-    appId: process.env.REACT_APP_APP_ID
+    apiKey: "AIzaSyD75fTcWOVpowFFZOl3YuO4lQm3JaXit5M",
+    authDomain: "progetto-iot-a63a0.firebaseapp.com",
+    projectId: "progetto-iot-a63a0",
+    storageBucket: "progetto-iot-a63a0.appspot.com",
+    messagingSenderId: "1051561475886",
+    appId: "1:1051561475886:web:8b5706a1f808fea5fc84bf"
 };
 
 const app = firebase.initializeApp(firebaseConfig);
