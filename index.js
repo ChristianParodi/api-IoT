@@ -20,15 +20,13 @@ app.get('/select/:id', async (req, res) => {
     }
 
     db.collection("children")
-        .where("ID", "==", id)
+        .where("child_id", "==", id)
         .get()
         .then(snapshot => {
             snapshot.forEach(doc => {
-                result.push(doc.data())
-            })
-            // Format dates to locale
-            result.forEach(doc => {
-                doc.data = format(doc.data.toDate(), "dd/MM/yyyy HH:mm:ss");
+                const data = doc.data();
+                data.data = format(data.data.toDate(), "dd/MM/yyyy HH:mm:ss"); // Localize dates
+                result.push(data);
             })
             res.json(result);
         });
