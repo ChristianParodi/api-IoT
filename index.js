@@ -21,6 +21,7 @@ app.get('/select/:id', async (req, res) => {
 
     db.collection("children")
         .where("child_id", "==", id)
+        .orderBy("data", "desc")
         .get()
         .then(snapshot => {
             snapshot.forEach(doc => {
