@@ -37,7 +37,7 @@ app.post("/insert", async (req, res) => {
     const body = req.body;
 
     const child = {
-        ID: body.child_id,
+        child_id: body.child_id,
         nome: body.nome,
         cognome: body.cognome,
         tipo: body.tipo,
